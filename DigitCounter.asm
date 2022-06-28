@@ -57,4 +57,4 @@ beq $v0, 1, Main
 
 Terminate:
 li $v0, 10
-syscall			#terminates program
+syscall			#terminates the program
