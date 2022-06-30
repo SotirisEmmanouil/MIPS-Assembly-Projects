@@ -431,6 +431,6 @@ Step27:
      j Step43 
    
    End:
-     li $v0, 10                     		# end program
+     li $v0, 10                    		# end program
      syscall
  
