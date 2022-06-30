@@ -1,4 +1,4 @@
-# MIPS program that will display the Swiss flag using built in memory location colors. Program created by Sotiris Emmanouil
+# MIPS program that will display the Swiss flag using built in colors. Program created by Sotiris Emmanouil
 # For the program to work, use the follow configurations on the MARS BitMap display:
 # Unit width in pixels: 8					     
 # Unit height in pixels: 8
@@ -14,8 +14,8 @@
 	li $t1, 268		                                        # sentinel value to stop coloring
 	li $t2, 276		                                        # sentinel value to stop coloring
 	li $t3, 288		                                        # sentinel value  to stop coloring
-	li $t4, 0xff0000	                                        # load the color red into $t4
-	li $t5, 0xffffff                                                # load the color white into $t5
+	li $t4, 0xff0000	                                        # load the color red into register $t4
+	li $t5, 0xffffff                                                # load the color white into register $t5
 	li $t6, 300		                                        # sentinel value to stop coloring
 	li $t7, 308		                                        # sentinel value  to stop coloring
 	li $t8, 320		                                        # sentinel value  to stop coloring
