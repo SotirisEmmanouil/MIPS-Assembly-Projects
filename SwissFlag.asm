@@ -7,26 +7,26 @@
 # Base Address for Display: 0x10008000 ($gp)
 
  .data
-	BitMapAddress:	.word	0x10008000                      #choose the desired BitMap type
+	BitMapAddress:	.word	0x10008000                              # choose the desired BitMap type
  
  .text
-	lw $t0, BitMapAddress	                                # $t0 stores the base address of the displ
+	lw $t0, BitMapAddress	                                        # $t0 stores the base address of the displ
 	li $t1, 268		                                        # sentinel value to stop coloring
 	li $t2, 276		                                        # sentinel value to stop coloring
 	li $t3, 288		                                        # sentinel value  to stop coloring
-	li $t4, 0xff0000	                                    #load the color red into $t4
-	li $t5, 0xffffff                                      # load the color white into $t5
+	li $t4, 0xff0000	                                        # load the color red into $t4
+	li $t5, 0xffffff                                                # load the color white into $t5
 	li $t6, 300		                                        # sentinel value to stop coloring
 	li $t7, 308		                                        # sentinel value  to stop coloring
 	li $t8, 320		                                        # sentinel value  to stop coloring
-	li $t9, 332   	                                      # sentinel value  to stop coloring
+	li $t9, 332   	                                                # sentinel value  to stop coloring
 	
  Step1:
-      beqz $t1, Step2             #check to see if desired region has been fully colored with desired color. If so, proceed to the next step
+      beqz $t1, Step2                 # check to see if desired region has been fully colored with desired color. If so, proceed to the next step
       sw $t4,($t0)	             # pain the pixel red 
-      addi $t0, $t0, 4	        #keep adding 4 bytes 
-      subi $t1, $t1, 1         # subtract by 1 to reach the sentinel value's desired coloring range
-      j Step1                 #loop 
+      addi $t0, $t0, 4	            # keep adding 4 bytes 
+      subi $t1, $t1, 1             # subtract by 1 to reach the sentinel value's desired coloring range
+      j Step1                     # loop 
       
  Step2:
      beq $t2, 268, Step3
@@ -131,7 +131,7 @@
      j Step13
   
  Load7:
- li $t9, 392
+    li $t9, 392
  
  Step14:
      beq $t9, 384, Load8
@@ -161,7 +161,7 @@
      j Step16 
     
  Load10:
- 	  li, $t9, 430
+     li, $t9, 430
  
  Step17:
      beq $t9, 410, Load11
@@ -170,28 +170,28 @@
      subi $t9, $t9, 1
      j Step17
  
-   Load11:
-   li, $t9, 436
+  Load11:
+     li, $t9, 436
    
-   Step18:
+  Step18:
      beq $t9, 430, Load12
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
      j Step18
   
- Load12:
+  Load12:
      li $t9, 442
   
- Step19:
+  Step19:
      beq $t9, 436, Load13
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
      j Step19
      
- Load13:
-  li, $t9, 462
+  Load13:
+   li, $t9, 462
   
  Step20:
      beq $t9, 442, Load14
@@ -221,7 +221,7 @@
      j Step22
  
  Load16:
-   li $t9, 494
+    li $t9, 494
  
  Step23:
      beq $t9, 474, Load17
@@ -321,10 +321,10 @@ Step27:
      j Step32
      
   Load26:
-   li $t9, 576
+     li $t9, 576
  
  Step33:
-    beq, $t9, 564, Load27
+     beq, $t9, 564, Load27
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -334,7 +334,7 @@ Step27:
     li $t9, 588
  
  Step34:
-   beq, $t9, 576, Load28
+     beq, $t9, 576, Load28
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -431,6 +431,6 @@ Step27:
      j Step43 
    
    End:
-     li $v0, 10.                     #end program
+     li $v0, 10                     #end program
      syscall
  
