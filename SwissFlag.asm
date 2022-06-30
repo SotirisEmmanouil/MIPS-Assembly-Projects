@@ -10,7 +10,7 @@
 	BitMapAddress:	.word	0x10008000                              # choose the desired BitMap type
  
  .text
-	lw $t0, BitMapAddress	                                        # $t0 stores the base address of the displ
+	lw $t0, BitMapAddress	                                        # $t0 stores the base address of the display
 	li $t1, 268		                                        # sentinel value to stop coloring
 	li $t2, 276		                                        # sentinel value to stop coloring
 	li $t3, 288		                                        # sentinel value  to stop coloring
@@ -23,8 +23,8 @@
 	
  Step1:
       beqz $t1, Step2                 # check to see if desired region has been fully colored with desired color. If so, proceed to the next step
-      sw $t4,($t0)	             # pain the pixel red 
-      addi $t0, $t0, 4	            # keep adding 4 bytes 
+      sw $t4,($t0)	             # paint the pixel red 
+      addi $t0, $t0, 4	            # keep adding 4, which is equivalent to 1 pixel. So by adding 4, a pixel will get colored with the color loaded.
       subi $t1, $t1, 1             # subtract by 1 to reach the sentinel value's desired coloring range
       j Step1                     # loop 
       
