@@ -71,7 +71,7 @@
      j Step7
      
  Load1:
-     li, $t9, 340       #register $t9 will be looaded with the approporiate value sentinel value to colored up to
+     li, $t9, 340       			#register $t9 will be looaded with the approporiate value sentinel value to colored up to
      
      Step8:
      beq $t9, 332, Load2
@@ -431,6 +431,6 @@ Step27:
      j Step43 
    
    End:
-     li $v0, 10                     #end program
+     li $v0, 10                     		# end program
      syscall
  
