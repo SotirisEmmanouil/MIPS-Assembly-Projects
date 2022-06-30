@@ -91,7 +91,7 @@
      j Step9
      
  Load3:
-     li, $t9, 364
+     li $t9, 364
     
  Step10:
      beq $t9, 352, Load4
@@ -101,7 +101,7 @@
      j Step10
    
  Load4:
-     li, $t9, 360
+     li $t9, 360
 
  Step11:
      beq $t9, 352, Load5
@@ -111,7 +111,7 @@
      j Step11
      
  Load5:
-     li, $t9, 372
+     li $t9, 372
      
  Step12:
      beq $t9, 360, Load6
@@ -161,7 +161,7 @@
      j Step16 
     
  Load10:
-     li, $t9, 430
+     li $t9, 430
  
  Step17:
      beq $t9, 410, Load11
@@ -171,7 +171,7 @@
      j Step17
  
   Load11:
-     li, $t9, 436
+     li $t9, 436
    
   Step18:
      beq $t9, 430, Load12
@@ -191,7 +191,7 @@
      j Step19
      
   Load13:
-   li, $t9, 462
+     li $t9, 462
   
  Step20:
      beq $t9, 442, Load14
@@ -201,7 +201,7 @@
      j Step20
  
  Load14:
-     li, $t9, 468
+     li $t9, 468
  
  Step21:
      beq $t9, 462, Load15
@@ -211,7 +211,7 @@
      b Step21
  
  Load15:
-   li, $t9, 474
+    li $t9, 474
    
  Step22:
      beq $t9, 468, Load16
@@ -231,7 +231,7 @@
      j Step23
  
  Load17:
-   li $t9, 500
+    li $t9, 500
  
  Step24:
      beq $t9, 494, Load18
@@ -241,7 +241,7 @@
      j Step24
  
  Load18:
-   li $t9, 506
+    li $t9, 506
    
  Step25:
      beq $t9, 500, Load19
@@ -261,7 +261,7 @@
      j Step26
      
  Load20:
-  li, $t9, 512
+    li $t9, 512
 
 Step27:
      beq $t9, 506, Load21
@@ -271,7 +271,7 @@ Step27:
      j Step27
  
  Load21:
- li $t9, 524
+    li $t9, 524
  
  Step28:
      beq $t9, 512, Load22
@@ -281,7 +281,7 @@ Step27:
      j Step28
      
  Load22:
-      li, $t9, 532
+      li $t9, 532
     
  Step29:
      beq $t9, 524, Load23
@@ -301,10 +301,10 @@ Step27:
      j Step30
      
  Load24:
-    li, $t9, 556
+    li $t9, 556
  
  Step31:
-     beq, $t9, 544, Load25
+     beq $t9, 544, Load25
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -314,7 +314,7 @@ Step27:
      li $t9, 564
   
  Step32:
-     beq, $t9, 556, Load26
+     beq $t9, 556, Load26
      sw $t5, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -324,7 +324,7 @@ Step27:
      li $t9, 576
  
  Step33:
-     beq, $t9, 564, Load27
+     beq $t9, 564, Load27
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -334,7 +334,7 @@ Step27:
     li $t9, 588
  
  Step34:
-     beq, $t9, 576, Load28
+     beq $t9, 576, Load28
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -344,7 +344,7 @@ Step27:
      li $t9, 596
   
  Step35:
-     beq, $t9, 588, Load29
+     beq $t9, 588, Load29
      sw $t5, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -354,7 +354,7 @@ Step27:
      li $t9, 608
      
  Step36:
-    beq, $t9, 596, Load30
+     beq $t9, 596, Load30
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -364,7 +364,7 @@ Step27:
     li $t9, 620
    
    Step37:
-     beq, $t9, 608, Load31
+     beq $t9, 608, Load31
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -374,17 +374,17 @@ Step27:
      li $t9, 628
  
   Step38:
-     beq, $t9, 620, Load32
+     beq $t9, 620, Load32
      sw $t5, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
      j Step38
    
   Load32: 
-  li $t9, 640      
+    li $t9, 640      
  
  Step39:
-     beq, $t9, 628, Load33
+     beq $t9, 628, Load33
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -394,7 +394,7 @@ Step27:
      li $t9, 652
    
  Step40:
-     beq, $t9, 640, Load34
+     beq $t9, 640, Load34
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -404,7 +404,7 @@ Step27:
      li $t9, 660
   
   Step41:
-     beq, $t9, 652, Load35
+     beq $t9, 652, Load35
      sw $t5, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -414,7 +414,7 @@ Step27:
     li $t9, 672
     
  Step42:
-     beq, $t9, 660, Load36
+     beq $t9, 660, Load36
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
@@ -424,7 +424,7 @@ Step27:
     li $t9, 4096
    
  Step43:
-     beq, $t9, 672, End
+     beq $t9, 672, End
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
