@@ -2,7 +2,7 @@
 
 .data
 array:     .word  75, 70, 40, 53, 29, 60, 89, 90, 100, 4, 23, 400, 5	                                   #array entries 
-size:      .word  13							                                                                   #size of the array 
+size:      .word  13							                                                           #size of the array 
 message0: .asciiz "Please enter a number to check to see if its on the list: "
 message1: .asciiz "The number "
 message2: .asciiz " is on the list \n"
