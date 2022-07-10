@@ -208,7 +208,7 @@
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t9, $t9, 1
-     b Step21
+     j Step21
  
  Load15:
     li $t9, 474
