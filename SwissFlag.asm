@@ -433,4 +433,3 @@ Step27:
    End:
      li $v0, 10                    		# end program
      syscall
- 
