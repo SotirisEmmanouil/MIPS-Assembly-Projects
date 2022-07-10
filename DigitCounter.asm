@@ -1,4 +1,4 @@
-#MIPS program that returns the amount of digits in an integer created by Sotiris Emmanouil 
+#MIPS program that returns the amount of digits in an integer created by Sotiris Emmanouil
 
 .data 
 Message1: .asciiz "Please enter an integer: "
