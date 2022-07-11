@@ -28,8 +28,12 @@ b Output2
 Division: 				#loop to divide each number by 10 and 
 beqz $t0, Output1			#record the amount of times division occurs until the quotient 
 div $t0, $t0, 10			#reaches 0
-addi $s4, $s4, 1
+jal Addition
 b Division 
+
+Addition:
+addi $s4, $s4, 1
+jr $ra
 
 Output1:
 li, $v0, 4			# prints message2
