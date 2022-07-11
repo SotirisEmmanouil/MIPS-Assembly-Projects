@@ -32,7 +32,7 @@ jal Addition
 b Division 
 
 Addition:
-addi $s4, $s4, 1
+addi $s4, $s4, 1       #keep track of how many times integer division is succesful
 jr $ra
 
 Output1:
