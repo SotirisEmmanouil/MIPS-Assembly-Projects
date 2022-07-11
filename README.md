@@ -9,3 +9,8 @@ This MIPS program receives an integer input from the user, loops the inputed int
 2. SwissFlag.asm
 
 This program uses the MIPS assembly language as well as the prebuilt colors to display the Swiss flag. This program should be run on the MARS 4_5 simulator with the configurations listed in the commentary found in the beginning of the code for the best results. This project helped me understand how computer graphics work at such a low level.  
+
+3. LinearSearch.asm
+
+A simple implementation of the Linear search algorithm using an pre defined array. The program will prompt the user to enter a value to be checked to see if it is found in the array. The program also has the ability to ask the user if they want to continue, and try a different value to be checked. 
+
