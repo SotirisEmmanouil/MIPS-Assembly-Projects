@@ -50,9 +50,9 @@ beq $t7, 1, Main		# if user enters 1, branch back to Main
 
 NumberDoesNotExist:
 li $v0, 4			# load 4 into $v0 to print message
-la $a0, message1		#print 
+la $a0, message1		#print message1
 syscall
-la $a0, ($t6)			#print number that exists in the array 
+la $a0, ($t6)			
 li $v0, 1
 syscall
 li $v0, 4
