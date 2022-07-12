@@ -57,8 +57,9 @@ la, $a0, Message4	 #print message
 syscall
 li $v0, 5		# receive input from user if they wish to proceed
 syscall
-beqz $v0, Terminate
-beq $v0, 1, Main
+move $t3, $v0
+beqz $t3, Terminate
+beq $t3, 1, Main
 
 Terminate:
 li $v0, 10
