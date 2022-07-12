@@ -7,7 +7,7 @@ message0: .asciiz "Please enter a number to check to see if its on the list: "
 message1: .asciiz "The number "
 message2: .asciiz " is on the list \n"
 message3: .asciiz " is not on the list \n" 
-message4: .asciiz "Would you like to try a different number?\nEnter 1 for yes or 0 for no: "
+message4: .asciiz "Would you like to try a different number?\nEnter 1 for yes or anything else for no: "
 .text
 
 Main:
@@ -45,7 +45,7 @@ syscall
 li $v0, 5			#receive input from user
 syscall	
 move $t7, $v0
-beqz $t7, Terminate		#if user enters 0, branch to terminate
+bne $t7, 1, Terminate		#if user does not enter 1, branch to terminate
 beq $t7, 1, Main		# if user enters 1, branch back to Main
 
 NumberDoesNotExist:
@@ -64,7 +64,6 @@ syscall
 li $v0, 5			#receive input from user
 syscall	
 move $t7, $v0 
-beqz $t7, Terminate		#if user enters 0, branch to terminate
 beq $t7, 1, Main		# if user enters 1, branch back to Main
 
 Terminate:			#terminate the program 
