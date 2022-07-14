@@ -61,6 +61,6 @@ move $t3, $v0
 beqz $t3, Terminate
 beq $t3, 1, Main
 
-Terminate:
+Terminate: 
 li $v0, 10
 syscall			#terminates the program
