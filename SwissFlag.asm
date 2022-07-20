@@ -71,7 +71,7 @@
      j Step7
      
  Load1:
-     li, $t9, 340       			#register $t9 will be looaded with the approporiate value sentinel value to colored up to
+     li $t9, 340       			#register $t9 will be looaded with the approporiate value sentinel value to colored up to
      
      Step8:
      beq $t9, 332, Load2
@@ -81,7 +81,7 @@
      j Step8
      
  Load2:
-     li, $t9, 352
+     li $t9, 352
      
  Step9:
      beq $t9, 340, Load3
