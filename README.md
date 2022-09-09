@@ -16,4 +16,4 @@ A simple implementation of the Linear search algorithm using an pre defined arra
 
 ### Project2
 
-This program receives a floating point input and truncates it so that it becomes an integer by manually shifting the bits around. Once the number has been truncated, the program will add all the integers between 1 and itself, printing the solution. This project was completed while taking Professor Frary's CS240 Computer Organization and Assembly Language course at CUNY Queens College during the Spring 2022 semester
+This program receives an input and if the input is a floating point number, the program truncates it so that it becomes an integer by manually shifting the bits around. Once the number has been truncated, the program will add all the integers between 1 and itself, printing the solution. This project was completed while taking Professor Frary's CS240 Computer Organization and Assembly Language course at CUNY Queens College during the Spring 2022 semester
