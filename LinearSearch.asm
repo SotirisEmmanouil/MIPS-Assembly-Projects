@@ -1,4 +1,4 @@
-# An implementation of the Linear Search Algorithm in the MIPS Assembly Language by Sotiris Emmanouil. This algorithm has a runtime of O(n).
+# An implementation of the Linear Search Algorithm in the MIPS Assembly Language by Sotiris Emmanouil. This algorithm has a worst case runtime of O(n).
 
 .data
 array:     .word  75, 70, 40, 53, 29, 60, 89, 90, 100, 4, 23, 400, 5	                                   #array entries
