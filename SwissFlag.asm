@@ -1,3 +1,10 @@
+# MIPS program that will display the Swiss flag using built in colors. Program created by Sotiris Emmanouil
+# For the program to work, use the follow configurations on the MARS BitMap display:
+# Unit width in pixels: 8					     
+# Unit height in pixels: 8
+# Display width in pixels: 256
+# Display height in pixels: 256
+# Base Address for Display: 0x10008000 ($gp)
 
  .data
 	BitMapAddress:	.word	0x10008000                              # choose the desired BitMap type
@@ -29,14 +36,14 @@
      j Step2
      
  Step3:
-     beq, $t3, 276, Step4
+     beq $t3, 276, Step4
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t3, $t3, 1
      j Step3
      
  Step4:
-     beq, $t6, 288, Step5
+     beq $t6, 288, Step5
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t6, $t6, 1
@@ -50,7 +57,7 @@
      j Step5
      
  Step6:
-     beq, $t8, 308, Step7
+     beq $t8, 308, Step7
      sw $t4, ($t0)
      addi $t0,$t0,4
      subi $t8, $t8, 1
@@ -66,7 +73,7 @@
  Load1:
      li $t9, 340       			#register $t9 will be looaded with the approporiate value sentinel value to colored up to
      
-     Step8:
+ Step8:
      beq $t9, 332, Load2
      sw $t5, ($t0)
      addi $t0,$t0,4
@@ -204,7 +211,7 @@
      j Step21
  
  Load15:
-    li $t9, 474
+     li $t9, 474
    
  Step22:
      beq $t9, 468, Load16
@@ -214,7 +221,7 @@
      j Step22
  
  Load16:
-    li $t9, 494
+     li $t9, 494
  
  Step23:
      beq $t9, 474, Load17
@@ -414,7 +421,7 @@ Step27:
      j Step42
  
  Load36:
-    li $t9, 4096
+     li $t9, 4096
    
  Step43:
      beq $t9, 672, End
