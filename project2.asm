@@ -4,7 +4,7 @@
 Prompt: .asciiz            "\n Please Input a value for N = "
 floatpointmessage: .asciiz "\n You entered a Floating Point number. It has been truncated and we will be using: "
 Result: .asciiz            "\n The sum of the integers from 1 to N is: "
-Bye:    .asciiz "           \n *** Adios Amigo - Have a good day *** " 
+Bye:    .asciiz            "\n *** Adios Amigo - Have a good day *** " 
 .globl main
 .text
  
